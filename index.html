@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Absolute</title>
+	<meta charset="UTF-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css?_v=20220111145754" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+
+	<link rel="stylesheet" href="css/style.min.css?_v=20220111145754" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__top">
+				<div class="header__container">
+					<div class="header__body">
+						<button type="button" class="menu__icon icon-menu">
+							<span></span>
+						</button>
+
+						<a class="header__logo" href="#">
+							<picture><source srcset="img/logo.webp"type="image/webp"><img src="img/logo.png" class="header__img" loadig="lazy" alt="absolute web services" /></picture>
+						</a>
+
+						<div class="header__search">
+							<form action="#" class="header__form" action="../../" data-da=".header,767,3">
+								<input autocomplete="off" type="text" placeholder="Search" class="header__input" required />
+
+								<button type="submit" class="header__button">
+									<picture><source srcset="img/icons/search.webp"type="image/webp"><img src="img/icons/search.png" alt="submitButton" /></picture>
+								</button>
+							</form>
+
+							<button type="button" class="header__button--blue">
+								<picture><source srcset="img/icons/search-blue.webp"type="image/webp"><img src="img/icons/search-blue.png" alt="searchButton" /></picture>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="header__menu menu">
+				<nav class="menu__body menu__container">
+					<ul class="menu__list">
+						<li class="menu__item">
+							<a href="#" class="menu__link">home</a>
+						</li>
+
+						<li class="menu__item">
+							<a href="#" class="menu__link">services</a>
+						</li>
+
+						<li class="menu__item">
+							<a href="#" class="menu__link">portfolio</a>
+						</li>
+
+						<li class="menu__item">
+							<a href="#" class="menu__link">gallery</a>
+						</li>
+
+						<li class="menu__item">
+							<a href="#" class="menu__link">help & faq</a>
+						</li>
+
+						<li class="menu__item">
+							<a href="#" class="menu__link">about</a>
+						</li>
+
+						<li class="menu__item">
+							<a href="#" class="menu__link">contact</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<main class="page">
+			<section class="buttons">
+				<div class="buttons__container">
+					<div class="buttons__body">
+						<h2 class="buttons__title title">Buttons</h2>
+					</div>
+
+					<div class="buttons__row">
+						<button type="button" class="buttons__item btn btn-primary">
+							Primary
+						</button>
+
+						<button type="button" class="buttons__item btn btn-default btn-outline-primary">
+							Default
+						</button>
+
+						<button type="button" class="buttons__item btn btn-success">
+							Success
+						</button>
+
+						<button type="button" class="buttons__item btn btn-info">
+							Info
+						</button>
+
+						<button type="button" class="buttons__item btn btn-warning">
+							Warning
+						</button>
+
+						<button type="button" class="buttons__item btn btn-danger">
+							Danger
+						</button>
+					</div>
+				</div>
+			</section>
+
+			<section class="inputs">
+				<div class="inputs__container">
+					<div class="inputs__body">
+						<h2 class="inputs__title title">Inputs</h2>
+
+						<form action="#" class="inputs__form">
+							<div class="inputs__item">
+								<label class="inputs__label">
+									<input class="inputs__checkbox visually-hidden" type="checkbox" checked />
+
+									<span class="inputs__square"></span>
+									Checkbox Active
+								</label>
+
+								<label class="inputs__label">
+									<input class="inputs__checkbox visually-hidden" type="checkbox" />
+
+									<span class="inputs__square"></span>
+									Checkbox
+								</label>
+							</div>
+
+							<div class="inputs__item">
+								<label class="inputs__label">
+									<input class="inputs__radio visually-hidden" value="first" name="radioBtn" type="radio" checked />
+
+									<span class="inputs__circle"></span>
+									Radio Active
+								</label>
+
+								<label class="inputs__label">
+									<input class="inputs__radio visually-hidden" value="second" name="radioBtn" type="radio" />
+
+									<span class="inputs__circle"></span>
+									Radio
+								</label>
+							</div>
+
+							<div class="inputs__item">
+								<label class="inputs__label inputs__label-switcher">
+									<input class="inputs__switcher visually-hidden" type="checkbox" checked />
+
+									<span class="inputs__thumb"></span>
+									Switcher ON
+								</label>
+
+								<label class="inputs__label inputs__label-switcher">
+									<input class="inputs__switcher visually-hidden" type="checkbox" />
+
+									<span class="inputs__thumb"></span>
+									Switcher OFF
+								</label>
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
+
+			<section class="rating">
+				<div class="rating__container">
+					<div class="rating__body">
+						<h2 class="rating__title title">Star rating</h2>
+
+						<div class="rating__wrap">
+							<div class="rating__item">
+								<div class="rating__static stars--0">
+									<div class="rating__star"></div>
+									<div class="rating__star"></div>
+									<div class="rating__star"></div>
+									<div class="rating__star"></div>
+									<div class="rating__star"></div>
+								</div>
+
+								<h3 class="rating__caption">Show rating</h3>
+							</div>
+
+							<div class="rating__item">
+								<div class="rating__dynamic">
+									<input type="radio" name="stars" value="1" aria-label="Ужасно" class="rating__star-second" />
+
+									<input type="radio" name="stars" value="2" aria-label="Сносно" class="rating__star-second" />
+
+									<input type="radio" name="stars" value="3" aria-label="Нормально" class="rating__star-second" />
+
+									<input type="radio" name="stars" value="4" aria-label="Хорошо" class="rating__star-second" />
+
+									<input type="radio" name="stars" value="5" aria-label="Отлично" class="rating__star-second" />
+								</div>
+
+								<h3 class="rating__caption">Check rating</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="carousel">
+				<div class="carousel__container">
+					<div class="carousel__body">
+						<h2 class="carousel__title title">Carousel</h2>
+
+						<div class="carousel__slider">
+							<div class="carousel__swiper">
+								<div class="carousel__slide slide">
+									<div class="slide__column">
+										<div class="slide__photo">
+											<picture><source srcset="img/carousel/Chewbacca.webp"type="image/webp"><img class="slide__img" src="img/carousel/Chewbacca.png" alt="chewbacca" /></picture>
+										</div>
+
+										<div class="slide__content">
+											<p class="slide__text">
+												When I started, I weighed over 425 pounds. What
+												matters is that you take the steps and focus on making
+												one good choice at a time.
+											</p>
+
+											<h4 class="slide__title">Chewbacca</h4>
+
+											<p class="slide__date">July 2017</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="carousel__slide slide">
+									<div class="slide__column">
+										<div class="slide__photo">
+											<picture><source srcset="img/carousel/dart-mini.webp"type="image/webp"><img class="slide__img" src="img/carousel/dart-mini.png" alt="dart" /></picture>
+										</div>
+
+										<div class="slide__content">
+											<p class="slide__text">
+												When I stahe steps and focus on making one good choice
+												at a time.
+											</p>
+
+											<h4 class="slide__title">Dart</h4>
+
+											<p class="slide__date">July 2019</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="carousel__slide slide">
+									<div class="slide__column">
+										<div class="slide__photo">
+											<picture><source srcset="img/carousel/yoda-mini.webp"type="image/webp"><img class="slide__img" src="img/carousel/yoda-mini.png" alt="yoda" /></picture>
+										</div>
+
+										<div class="slide__content">
+											<p class="slide__text">
+												When I stahe steps and focus on making one good choice
+												at a time.Lorem ipsum dolor sit, amet consectetur
+												adipisicing elit. Ad, ducimus!
+											</p>
+
+											<h4 class="slide__title">Yoda</h4>
+
+											<p class="slide__date">July 2021</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="carousel__slide slide">
+									<div class="slide__column">
+										<div class="slide__photo">
+											<picture><source srcset="img/carousel/dart-mini.webp"type="image/webp"><img class="slide__img" src="img/carousel/dart-mini.png" alt="dart" /></picture>
+										</div>
+
+										<div class="slide__content">
+											<p class="slide__text">
+												When I stahe steps and focus on making one good choice
+												at a time.Lorem ipsum dolor, sit amet consectetur
+												adipisicing elit. Quae delectus enim laborum provident
+												earum atque!
+											</p>
+
+											<h4 class="slide__title">Dart</h4>
+
+											<p class="slide__date">July 2023</p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="carousel__control">
+								<div class="carousel__arrow carousel__arrow-prev">
+									<svg aria-hidden="true" width="9" height="15" focusable="false" data-prefix="fas" data-icon="chevron-left" class="svg-inline--fa fa-chevron-left fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+										<path fill="#5e5d5c" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"></path>
+									</svg>
+								</div>
+
+								<div class="carousel__arrow carousel__arrow-next">
+									<svg aria-hidden="true" width="9" height="15" focusable="false" data-prefix="fas" data-icon="chevron-left" class="svg-inline--fa fa-chevron-left fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+										<path fill="#5e5d5c" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"></path>
+									</svg>
+								</div>
+							</div>
+						</div>
+
+						<div class="carouselThumb__slider">
+							<div class="carouselThumb__swiper">
+								<div class="carouselThumb__slide">
+									<picture><source srcset="img/carousel/Chewbacca-mini.webp"type="image/webp"><img class="carouselThumb__img" loading="lazy" src="img/carousel/Chewbacca-mini.png" alt="chewbacca" /></picture>
+								</div>
+
+								<div class="carouselThumb__slide">
+									<picture><source srcset="img/carousel/dart-mini.webp"type="image/webp"><img class="carouselThumb__img" loading="lazy" src="img/carousel/dart-mini.png" alt="dart" /></picture>
+								</div>
+
+								<div class="carouselThumb__slide">
+									<picture><source srcset="img/carousel/yoda-mini.webp"type="image/webp"><img class="carouselThumb__img" loading="lazy" src="img/carousel/yoda-mini.png" alt="yoda" /></picture>
+								</div>
+
+								<div class="carouselThumb__slide">
+									<picture><source srcset="img/carousel/dart-mini.webp"type="image/webp"><img class="carouselThumb__img" loading="lazy" src="img/carousel/dart-mini.png" alt="dart" /></picture>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__body">
+					<div class="footer__spollers spollers" data-spollers="650,max" data-one-spoller>
+						<div class="spollers__item">
+							<h4 data-spoller class="spollers__title">
+								<span>Shop</span>
+
+								<span class="spollers__arrow">
+									<svg aria-hidden="true" height="15" width="8" focusable="false" data-prefix="fas" data-icon="chevron-left" class="svg-inline--fa fa-chevron-left fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+										<path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"></path>
+									</svg>
+								</span>
+							</h4>
+
+							<ul class="spollers__list">
+								<li class="spollers__section">
+									<a href="#" class="spollers__link"> Browse By Holidays </a>
+								</li>
+
+								<li class="spollers__section">
+									<a href="#" class="spollers__link"> Browse By Brand </a>
+								</li>
+
+								<li class="spollers__section">
+									<a href="#" class="spollers__link"> Gift of the Month Clubs </a>
+								</li>
+
+								<li class="spollers__section">
+									<a href="#" class="spollers__link"> Customized Bottles </a>
+								</li>
+
+								<li class="spollers__section">
+									<a href="#" class="spollers__link"> Corporate Gifts </a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="spollers__item">
+							<h4 data-spoller class="spollers__title">
+								<span>About</span>
+
+								<span class="spollers__arrow">
+									<svg aria-hidden="true" height="15" width="8" focusable="false" data-prefix="fas" data-icon="chevron-left" class="svg-inline--fa fa-chevron-left fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+										<path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"></path>
+									</svg>
+								</span>
+							</h4>
+
+							<ul class="spollers__list">
+								<li class="spollers__section">
+									<a href="#" class="spollers__link"> About Spirited Gifts</a>
+								</li>
+
+								<li class="spollers__section">
+									<a href="#" class="spollers__link"> Read our Blog </a>
+								</li>
+
+								<li class="spollers__section">
+									<a href="#" class="spollers__link"> About our Selection </a>
+								</li>
+
+								<li class="spollers__section">
+									<a href="#" class="spollers__link">Read our Reviews</a>
+								</li>
+
+								<li class="spollers__section">
+									<a href="#" class="spollers__link"> Shipping & Returns</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="spollers__item">
+							<h4 data-spoller class="spollers__title">
+								<span>More</span>
+
+								<span class="spollers__arrow">
+									<svg aria-hidden="true" height="15" width="8" focusable="false" data-prefix="fas" data-icon="chevron-left" class="svg-inline--fa fa-chevron-left fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+										<path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"></path>
+									</svg>
+								</span>
+							</h4>
+
+							<ul class="spollers__list">
+								<li class="spollers__section">
+									<a href="#" class="spollers__link"> Privacy Policy</a>
+								</li>
+
+								<li class="spollers__section">
+									<a href="#" class="spollers__link"> Retailer Network</a>
+								</li>
+
+								<li class="spollers__section">
+									<a href="#" class="spollers__link"> Help and FAQs</a>
+								</li>
+
+								<li class="spollers__section">
+									<a href="#" class="spollers__link"> Scholarship</a>
+								</li>
+
+								<li class="spollers__section">
+									<a href="#" class="spollers__link"> Contact Us</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="footer__social social">
+						<h4 class="social__title">Follow us</h4>
+
+						<ul class="social__list">
+							<li class="social__item">
+								<a class="social__link" href="" target="_blank" rel="noopener">
+									<img src="img/social/facebook.svg" alt="facebook" />
+								</a>
+							</li>
+
+							<li class="social__item">
+								<a class="social__link" href="" target="_blank" rel="noopener">
+									<img src="img/social/twitter.svg" alt="twitter" />
+								</a>
+							</li>
+
+							<li class="social__item">
+								<a class="social__link" href="" target="_blank" rel="noopener">
+									<img src="img/social/instagram.svg" alt="instagram" />
+								</a>
+							</li>
+
+							<li class="social__item">
+								<a class="social__link" href="" target="_blank" rel="noopener">
+									<img src="img/social/pinterest.svg" alt="pinterest" />
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+	<script src="js/app.min.js?_v=20220111145754"></script>
+</body>
+
+</html>
