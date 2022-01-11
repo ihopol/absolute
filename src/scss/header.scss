@@ -1,0 +1,236 @@
+.header {
+  // .header__top
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: $mobile) {
+      border-bottom: 1px solid #f4f5f7;
+      @include adaptiveValue("padding-bottom", 28, 10);
+    }
+
+    @media (min-width: $mobile) {
+      @include adaptiveValue("margin-bottom", 28, 10);
+    }
+
+    @include adaptiveValue("padding-top", 28, 10);
+  }
+
+  // .header__container
+  &__container {
+    width: 100%;
+    @media (min-width: $tablet) {
+      position: relative;
+    }
+  }
+
+  // .header__body
+  &__body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  // .header__logo
+  &__logo {
+    padding: 0px 10px;
+
+    @include adaptiveValue("flex-basis", 244, 172);
+  }
+
+  // .header__img
+  &__img {
+    max-width: 100%;
+  }
+
+  // .header__search
+  &__search {
+  }
+
+  // .header__form
+  &__form {
+    display: grid;
+    justify-self: end;
+    grid-template-columns: minmax(auto, 292px) minmax(auto, 76px);
+
+    @media (max-width: $mobile) {
+      display: none;
+    }
+
+    &--show {
+      display: grid;
+      background-color: #f4f5f7;
+      padding: 10px;
+    }
+  }
+
+  // .header__input
+  &__input {
+    height: 36px;
+    padding: 0px 14px;
+    border: 1px solid #a1a1a1;
+    border-radius: 2px;
+    margin-right: -1px;
+  }
+
+  // .header__button
+  &__button {
+    background-color: #0049b0;
+    border-radius: 2px;
+  }
+
+  // .header__button--blue
+  &__button--blue {
+    display: none;
+
+    @media (max-width: $mobile) {
+      display: block;
+    }
+  }
+  // .header__menu
+  &__menu {
+    @media (min-width: 1025px) {
+      background-color: #f4f5f7;
+      position: absolute;
+      z-index: 20;
+      left: 0;
+      right: 0;
+
+      &--sticky {
+        position: fixed;
+        top: 0;
+      }
+    }
+  }
+}
+
+.menu {
+  // .menu__icon
+  &__icon {
+  }
+
+  // .menu__body
+  &__body {
+    @media (max-width: $tablet) {
+      display: none;
+
+      .menu-open & {
+        display: block;
+
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  // .menu__list
+  &__list {
+    margin: 0;
+    padding: 0;
+
+    @media (min-width: 1025px) {
+      text-align: center;
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+    }
+  }
+
+  // .menu__item
+  &__item {
+    background-color: #f4f5f7;
+    transition: background-color 0.3s;
+
+    border-right: 1px solid #eee;
+
+    &:first-child {
+      border-left: 1px solid #eee;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: #eaecf0;
+      }
+    }
+  }
+
+  // .menu__link
+  &__link {
+    color: $mainColor;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: 100%;
+    white-space: nowrap;
+    display: inline-block;
+    padding: 25px 40px;
+    transition: color 0.3s;
+
+    @include adaptiveValue("padding-top", 25, 10);
+    @include adaptiveValue("padding-bottom", 25, 10);
+    @include adaptiveValue("padding-left", 40, 10);
+    @include adaptiveValue("padding-right", 40, 10);
+
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: #0049b0;
+      }
+    }
+  }
+}
+
+// Burger
+.icon-menu {
+  display: none;
+  @media (max-width: $tablet) {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    z-index: 5;
+
+    span,
+    &::before,
+    &::after {
+      content: "";
+      border-radius: 15px;
+      transition: all 0.3s ease 0s;
+      left: 0px;
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      background-color: #0049b0;
+    }
+
+    &::before {
+      top: 0px;
+    }
+
+    &::after {
+      bottom: 0px;
+    }
+
+    span {
+      top: calc(50% - 2px);
+    }
+
+    .menu-open & {
+      span {
+        transform: scale(0);
+      }
+
+      &::before {
+        transform: rotate(-45deg);
+        top: calc(50% - 2px);
+      }
+
+      &::after {
+        transform: rotate(45deg);
+        bottom: calc(50% - 2px);
+      }
+    }
+  }
+}

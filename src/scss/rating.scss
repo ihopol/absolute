@@ -1,0 +1,137 @@
+.rating {
+  @include adaptiveValue("padding-top", 50, 25);
+  @include adaptiveValue("padding-bottom", 50, 25);
+
+  // .rating__container
+  &__container {
+  }
+
+  // .rating__body
+  &__body {
+  }
+
+  // .rating__title
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  // .rating__wrap
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $mobile) {
+      align-items: center;
+    }
+  }
+
+  // .rating__item
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-bottom: 14px;
+    }
+  }
+
+  // .rating__static
+  &__static {
+    display: flex;
+  }
+
+  // .rating__star
+  &__star {
+    width: 18px;
+    height: 18px;
+    background-image: url(../img/icons/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+  }
+
+  // .rating__dynamic
+  &__dynamic {
+    position: relative;
+    width: 100px;
+    height: 18px;
+
+    background-image: url(../img/icons/star.svg);
+    background-size: 20px auto;
+    background-repeat: repeat-x;
+  }
+
+  // .rating__star-second
+  &__star-second {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+
+    background-size: 20px auto;
+    background-repeat: repeat-x;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:checked,
+    &:hover {
+      background-image: url(../img/icons/star-active.svg);
+    }
+
+    &:hover ~ .rating__star-second {
+      background-image: url(../img/icons/star.svg);
+    }
+
+    &:nth-of-type(1) {
+      z-index: 5;
+      width: 20px;
+    }
+
+    &:nth-of-type(2) {
+      z-index: 4;
+      width: 20px * 2;
+    }
+
+    &:nth-of-type(3) {
+      z-index: 3;
+      width: 20px * 3;
+    }
+
+    &:nth-of-type(4) {
+      z-index: 2;
+      width: 20px * 4;
+    }
+
+    &:nth-of-type(5) {
+      z-index: 1;
+      width: 20px * 5;
+    }
+  }
+
+  // .rating__caption
+  &__caption {
+    margin-bottom: 0;
+    margin-left: 20px;
+    color: #5e5d5c;
+    font-family: "Open Sans";
+    font-size: 15px;
+    font-weight: 400;
+  }
+}
+
+.stars--1 > :nth-child(-n + 1),
+.stars--2 > :nth-child(-n + 2),
+.stars--3 > :nth-child(-n + 3),
+.stars--4 > :nth-child(-n + 4),
+.stars--5 > :nth-child(-n + 5) {
+  background-image: url(../img/icons/star-active.svg);
+}
